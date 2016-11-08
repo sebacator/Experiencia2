@@ -1,0 +1,120 @@
+<!--
+Formulario PHP - Desarrollo Web 2016 - Universidad de Valparaíso
+===================================================================
+Copyright © 2016 Miguel González Aravena. All rights reserved.
+https://github.com/MiguelGonzalezAravena/FormularioPHP
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Proyecto para enseñar el funcionamiento de un formulario en PHP">
+  <meta name="keywords" content="html, bootstrap, php, formulario, desarrollo, web">
+  <meta name="author" content="Miguel González Aravena">
+  <title>Formulario en PHP</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div class="container">
+  <h1>Formulario en PHP</h1>
+  <!-- Formulario -->
+  <form enctype="multipart/form-data" method="post" action="enviar.php" accept-charset="UTF-8">
+    <!-- Hidden -->
+    <input type="hidden" name="enviado" value="1">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Formulario</h3>
+      </div>
+      <div class="panel-body">
+        <!-- Texto -->
+        <div class="form-group">
+          <b>Nombre</b>
+          <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre">
+        </div>
+        <!-- Apellido -->
+        <div class="form-group">
+          <b>Apellido</b>
+          <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido">  
+        </div>
+        <div class="form-group">
+          <b>Fecha de nacimiento</b>
+          <input type="date" name="fecha" min="01-01-1980" max="12-31-2000"> 
+        </div>
+        <!-- Radio -->
+        <div class="form-group">
+          <b>Sexo</b><br />
+          <input type="radio" name="sexo" value="m"> Masculino<br />
+          <input type="radio" name="sexo" value="f"> Femenino<br />
+        </div>
+        <!-- Select -->
+        <div class="form-group">
+          <b>Región</b><br />
+          <select name="region" class="form-control">
+            <option value="">Seleccione una región</option>
+            <option value="15">Arica y Parinacota</option>
+            <option value="1">Tarapacá</option>
+            <option value="2">Antofagasta</option>
+            <option value="3">Atacama</option>
+            <option value="4">Coquimbo</option>
+            <option value="5">Valparaíso</option>
+            <option value="6">O'Higgins</option>
+            <option value="7">Maule</option>
+            <option value="8">Bío-Bío</option>
+            <option value="9">La Araucanía</option>
+            <option value="14">Los Ríos</option>
+            <option value="10">Los Lagos</option>
+            <option value="11">Aysén</option>
+            <option value="12">Magallanes</option>
+            <option value="rm">Metropolitana de Santiago</option>
+          </select>
+        </div>
+        <!-- Checkbox -->
+        <div class="form-group">
+          <b>Areas de interes</b><br />
+          <input type="checkbox" name="cienia" value="cienia">Ciencia.<br />
+          <input type="checkbox" name="deportes" value="deportes">Deportes.<br />
+          <input type="checkbox" name="pintura" value="pintura">Pintura rupestre.<br />
+          <input type="checkbox" name="videos" value="videos">Videos de gatos.<br />
+      </div>
+      	<div class="form-group">
+      	<!-- URL -->
+          <b>Pagina personal</b>
+          <input type="link" class="form-control" name="link" placeholder="Ingrese su URL">
+     	</div>
+      	<div class="form-group">
+      	<!-- Email -->
+          <b>Correo electrónico</b>
+          <input type="email" class="form-control" name="correo" placeholder="Ingrese su correo electrónico">
+     	</div>
+     	<div class="form-group">
+          <b>Color favorito</b>
+          <input type="text" class="form-control" name="color" placeholder="Ingrese su color favorito">
+     	</div>
+      <div class="panel-footer">
+        <div class="text-right">
+          <a href="./" class="btn btn-primary">
+            <i class="glyphicon glyphicon-repeat"></i>
+            Reiniciar
+          </a>
+          <!-- Button submit -->
+          <button type="submit" class="btn btn-success">
+            Enviar
+            <i class="glyphicon glyphicon-menu-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <!-- Pie de página -->
+  <footer>
+    <div class="text-center">
+      <i class="glyphicon glyphicon-leaf"></i>
+      Desarrollado por <a href="https://github.com/MiguelGonzalezAravena" target="_blank">Miguel González Aravena</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
